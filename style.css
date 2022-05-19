@@ -26,89 +26,85 @@ i {
     display:flex;
     align-items: center;
 }
+    
     /* Navbar */
-nav {
-    width: 100%;
-    padding: 10px 2%;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: white;
+
+.nav-bar {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px;
     position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.nav-left img {
+    top:0;
+    z-index: 100;
+    height: 60px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+        
+.nav__logo {
+    height: 25px;
+    margin-left: 20px;
+    object-fit: contain;
+    }
+        
+.nav__input {
+    display: flex;
+    align-items: center;
     width: 40%;
-    margin-left: 1rem;
-}
-
-
-.nav-left .menu-icon{
-    width:22px;
-    margin-right: 15px;
-}
-
-.nav-left img {
-    width: 130px;
-}
-
-.nav-middle .search-box{
-    border: 1px solid #ccc;
-    margin-right: 15px;
+    border: 1px solid lightgray;
     padding: 8px 12px;
     border-radius: 10px;
+    }
+        
+.nav__input input {
+    flex: 1;
+    border: none;
+    }
+        
+.nav__inputButton {
+    width: 50px  !important;
     
-}
+    }
+        
+.nav__delete {
+    margin-right: 20px;
+    }
 
-.nav-middle .mic-icon{
-    width: 16px;
-
-}
-
-.nav-middle .search-box input{
-    width: 400px;
-    border: 0;
-    outline: 0;
-    background: transparent;
+.icon {
+    margin-right: 1rem;
+    }
+        
+.nav__icons {
+    display: flex;
+    align-items: center;
+    }
     
-}
-.nav-middle .search-box i {
-    width: 20px;
-}
-
-.nav-middle .search-box .delete {
-    padding-right: 2rem;
-}
-
-.nav-right img{
+.user__icon{
     width: 40px;
     margin-right: 25px;
     border-radius: 50%;
-}
-
-.nav-right i{
-    width: 40px;
-    margin-right: 25px;
-}
-
+    }
+        
     /* Sidebar */
+
+.app__page {
+        display: flex;
+    }
     
 .sidebar {
+    flex: 0.2;
     background:white;
     width: 19%;
     position:fixed;
     top: 60px;
-    
     height: calc(100vh - 60px);
     overflow-y:scroll;
-    
 }
 
 .shortcut-links a img {
     width: 25px;
     margin-right: 20px;
-   
 }
 
 .shortcut-links a {
@@ -134,7 +130,6 @@ nav {
     height: 1px;
     background: black;
     width: 90%;
-    
 }
 
 .subscribed-list h3{
@@ -142,7 +137,6 @@ nav {
     margin-left: 20%;
     color: #5a5a5a;
     align-items: center;
-
 }
 
 .subscribed-list a {
@@ -161,7 +155,6 @@ nav {
     width: 25px;
     border-radius: 50%;
     margin-left:20px;
-
 }
 
 .subscribed-list a:hover{
@@ -186,4 +179,54 @@ nav {
 
 .small-sidebar::-webkit-scrollbar{
     display: none;
+}
+
+.container {
+    flex: 0.8;
+}
+
+.filters{
+    position: fixed;
+    left:20%;
+    top: 60px;
+    width: calc(100% - 50px);
+    height: 50px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.large-filters {
+    left:5%;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    color: #242424;
+    padding: 2px 17px;
+    border-radius: 50px;
+    background: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.filter-options:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+.filter-options.active{
+    color: #fff;
+    background-color: black;
 }

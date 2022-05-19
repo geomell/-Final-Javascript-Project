@@ -13,55 +13,72 @@
 </head>
 <body>
    <!--------nav bar--> 
-   <nav class="flex-div">
-    <div class="nav-left flex-div">
-        <i class="bi bi-list menu-icon"></i>
-         <img src="./img/logo1.png">
-         
-    </div>
-
-    <div class="nav-middle flex-div">
-        <div class="search-box flex-div">
-            <input type="text" id="input" placeholder="Search">
-            <i class="fa fa-times delete" aria-hidden="true"></i>
-           <i class="bi bi-search "></i>
+   <nav class="nav-bar">
+        <div class="nav__left ">
+            <i class="bi bi-list menu-icon"></i>
+            <img src="./img/logo1.png" class="nav__logo">
         </div>
-        <i class="bi bi-mic mic-icon"></i>
-    </div>
+
+        <div class="nav__input">
+            <input type="text" id="input" class="search-bar" placeholder="Search">
+            <i class="fa fa-times nav__delete" aria-hidden="true"></i>
+            <i class="bi bi-search nav__inputButton"></i>
+        </div>
      
-    <div class="nav-right flex-div">
-        <i class="bi bi-camera-video icon"></i>
-        <i class="bi bi-grid-3x3-gap icon"></i>
-        <i class="bi bi-bell icon"></i>
-        <img src="./img/g.jpg">
-    </div>
-</nav>
+        <div class="nav__icons">
+            <i class="bi bi-camera-video icon"></i>
+            <i class="bi bi-grid-3x3-gap icon"></i>
+            <i class="bi bi-bell icon"></i>
+            <img src="./img/g.jpg" class="user__icon">
+        </div>
+    </nav> 
 
- <!-----side bar-->   
-    
- <div class="sidebar">
-    <div class="shortcut-links">
-        <a href="#" class="links active "><img src="./img/home.png" alt=""><p >Home</p></a>
-        <a href="#" class="links "><img src="./img/explore.PNG" alt=""><p >Explore</p></a>
-        <a href="#" class="links "><img src="./img/subscription.PNG" alt=""><p >Subscription</p></a>
-        <hr class="separate">
-        <a href="#" class="links"><img src="./img/library.PNG" alt=""><p >Library</p></a>
-        <a href="#" class="links"><img src="./img/history.PNG" alt=""><p>History</p></a>
-        <a href="#" class="links"><img src="./img/your-video.PNG" alt=""><p>Your videos</p></a>
-        <a href="#" class="links"><img src="./img/watch-later.PNG" alt=""><p>Watch later</p></a>
-        <a href="#" class="links"><img src="./img/liked video.PNG" alt=""><p>Like videos</p></a>
-        <a href="#" class="links"><img src="./img/showmore.PNG" alt=""><p>Show More</p></a>
-        <hr class="separate">
-    </div>
-    <div class="subscribed-list">
-        <h3>SUBSCRIBED</h3>
-        <a href="#"><img src="./img/travel.jpg"><p>Travel The World</p></a>
-        <a href="#"><img src="./img/cs.jpg"><p>Computer Science</p></a>
-        <a href="#"><img src="./img/skynews.jpg"><p>Sky  News</p></a>
-        <a href="#"><img src="./img/aljaz.jpg"><p>Al Jazeera</p></a>
-    </div>
-</div>
+<!----main page-->
+    <div class="app__page"> 
 
+     <!-----------side bar-->     
+        <div class="sidebar">
+            <div class="shortcut-links">
+                <a href="#" class="links active "><img src="./img/home.png" alt=""><p >Home</p></a>
+                <a href="#" class="links "><img src="./img/explore.PNG" alt=""><p >Explore</p></a>
+                <a href="#" class="links "><img src="./img/subscription.PNG" alt=""><p >Subscription</p></a>
+                <hr class="separate">
+                <a href="#" class="links"><img src="./img/library.PNG" alt=""><p >Library</p></a>
+                <a href="#" class="links"><img src="./img/history.PNG" alt=""><p>History</p></a>
+                <a href="#" class="links"><img src="./img/your-video.PNG" alt=""><p>Your videos</p></a>
+                <a href="#" class="links"><img src="./img/watch-later.PNG" alt=""><p>Watch later</p></a>
+                <a href="#" class="links"><img src="./img/liked video.PNG" alt=""><p>Like videos</p></a>
+                <a href="#" class="links"><img src="./img/showmore.PNG" alt=""><p>Show More</p></a>
+                <hr class="separate">
+            </div>
+            <div class="subscribed-list">
+                <h3>SUBSCRIBED</h3>
+                <a href="#"><img src="./img/travel.jpg"><p>Travel</p></a>
+                <a href="#"><img src="./img/cs.jpg"><p>Tech</p></a>
+                <a href="#"><img src="./img/skynews.jpg"><p>Sky  News</p></a>
+                <a href="#"><img src="./img/aljaz.jpg"><p>Al Jazeera</p></a>
+            </div>
+
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-options active">all</button>
+                    <button class="filter-options">CSS</button>
+                    <button class="filter-options">web development</button>
+                    <button class="filter-options">python</button>
+                    <button class="filter-options">entertainment</button>
+                    <button class="filter-options">marvel</button>
+                    <button class="filter-options">javascript</button>
+                    <button class="filter-options">artificial intelligence</button>
+                    <button class="filter-options">machine learning</button>
+                    <button class="filter-options">trending</button>
+                </div>
+                
+                <div class="video-container">   
+                
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="./main.js"></script>
