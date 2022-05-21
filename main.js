@@ -2,7 +2,7 @@
 
 document.querySelector(".nav__logo").onclick = function () {
     location.href = "https://www.youtube.com/";
-    console.log ("hi");
+    //console.log ("hi");
 };
 
 // Open and close the menu on the left side
@@ -24,7 +24,7 @@ let deleteSearch=document.querySelector(".nav__delete");
 
 deleteSearch.addEventListener('click', function (){
     let inputSearch=document.getElementById('input');
-    console.log('delete');
+    //console.log('delete');
     inputSearch.value="";
 })
 
@@ -32,18 +32,20 @@ const searchInput = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.nav__inputButton');
 let searchLink = "https://www.youtube.com/results?search_query=";
 
-//Redirect to the youtube by pressing the Enter key
+//Redirect to the youtube with the keywords by pressing the Enter key
 
 searchInput.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    location.href = searchLink + searchInput.value;
-  }
+    if (event.key === "Enter") {
+        //console.log ("enter");
+        location.href = searchLink + searchInput.value;
+    }
 });
 
-//Redirect by pressing the len
+//Redirect to the youtube with the keywords by pressing the len
 
 searchBtn.addEventListener('click', () => {
     if(searchInput.value.length){
+        //console.log ("len");
         location.href = searchLink + searchInput.value;
     }
 })
