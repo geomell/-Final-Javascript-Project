@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Redirect to youtube website when clicking on the logo
 
 document.querySelector(".nav__logo").onclick = function () {
@@ -15,8 +17,8 @@ let filters=document.querySelector(".filters");
 menuIcon.onclick = function(){
     sideBar.classList.toggle("small-sidebar");
     container.classList.toggle("large-container");
-    filters.classList.toggle("large-filters")
-}
+    filters.classList.toggle("large-filters");
+};
 
 //Clear the input
 
@@ -26,13 +28,13 @@ deleteSearch.addEventListener('click', function (){
     let inputSearch=document.getElementById('input');
     //console.log('delete');
     inputSearch.value="";
-})
+});
 
 const searchInput = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.nav__inputButton');
 let searchLink = "https://www.youtube.com/results?search_query=";
 
-//Redirect to the youtube with the keywords by pressing the Enter key
+//Redirecting to the search results through the search-box by pressing the Enter
 
 searchInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -41,14 +43,14 @@ searchInput.addEventListener("keypress", function(event) {
     }
 });
 
-//Redirect to the youtube with the keywords by pressing the len
+//RRedirecting to the search results through the search-box by pressing the len
 
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click', function()  {
     if(searchInput.value.length){
         //console.log ("len");
         location.href = searchLink + searchInput.value;
     }
-})
+});
 
 //Using the API to get the data
 
@@ -69,7 +71,7 @@ fetch(video_http + new URLSearchParams({
 .then(data => {
     data.items.forEach(item => {
         getChannelIcon(item);
-    })
+    });
 })
 .catch(err => console.log(err));
 
@@ -83,8 +85,8 @@ const getChannelIcon = (video_data) => {
     .then(data => {
         video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
        makeVideoCard(video_data);
-    })
-}
+    });
+};
 
 // Adding the videos in the HTML
 
@@ -101,4 +103,4 @@ const makeVideoCard = (data) => {
             </div>
         </div>
     `;
-}
+};
