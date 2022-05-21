@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube</title>
+    <title>Youtube</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/dd76c683/img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/dd76c683/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-   <!--------nav bar--> 
-   <nav class="nav-bar">
-        <div class="nav__left ">
+        <!----NavBar---->
+    <div class="nav-bar">
+        <div class="nav__left">
             <i class="bi bi-list menu-icon"></i>
-            <img src="./img/logo1.png" class="nav__logo">
+            <img src="./img/logo1.png" class="nav__logo" alt="">
         </div>
-
         <div class="nav__input">
-            <input type="text" id="input" class="search-bar" placeholder="Search">
+            <input type="text" class="search-bar" id="input" placeholder="Search">
             <i class="fa fa-times nav__delete" aria-hidden="true"></i>
             <i class="bi bi-search nav__inputButton"></i>
         </div>
-     
         <div class="nav__icons">
             <i class="bi bi-camera-video icon"></i>
             <i class="bi bi-grid-3x3-gap icon"></i>
             <i class="bi bi-bell icon"></i>
-            <img src="./img/g.jpg" class="user__icon">
+            <img src="./img/g.jpg" class="user-icon" >
         </div>
-    </nav> 
+    </div>
 
-<!----main page-->
-    <div class="app__page"> 
+        <!----MainPage---->
+    <div class="app__page">
 
-     <!-----------side bar-->     
+            <!-----------SideBar---->
         <div class="sidebar">
             <div class="shortcut-links">
                 <a href="#" class="links active "><img src="./img/home.png" alt=""><p >Home</p></a>
@@ -58,29 +56,33 @@
                 <a href="#"><img src="./img/skynews.jpg"><p>Sky  News</p></a>
                 <a href="#"><img src="./img/aljaz.jpg"><p>Al Jazeera</p></a>
             </div>
+        </div>
+            <!-----------Container---->
+        <div class="container">
 
-            <div class="container">
-                <div class="filters">
-                    <button class="filter-options active">all</button>
-                    <button class="filter-options">CSS</button>
-                    <button class="filter-options">web development</button>
-                    <button class="filter-options">python</button>
-                    <button class="filter-options">entertainment</button>
-                    <button class="filter-options">marvel</button>
-                    <button class="filter-options">javascript</button>
-                    <button class="filter-options">artificial intelligence</button>
-                    <button class="filter-options">machine learning</button>
-                    <button class="filter-options">trending</button>
-                </div>
-                
-                <div class="video-container">   
-                
-                </div>
+                <!-----------Filters---->
+            <div class="filters">
+                <button class="filter-options active">all</button>
+                <button class="filter-options">CSS</button>
+                <button class="filter-options">web development</button>
+                <button class="filter-options">python</button>
+                <button class="filter-options">entertainment</button>
+                <button class="filter-options">marvel</button>
+                <button class="filter-options">javascript</button>
+                <button class="filter-options">artificial intelligence</button>
+                <button class="filter-options">machine learning</button>
+                <button class="filter-options">trending</button>
+            </div>
+
+                <!-----------Videos--> 
+            <div class="video-container">   
+        
             </div>
         </div>
     </div>
-
+    
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="./main.js"></script>
+    
 </body>
 </html>
